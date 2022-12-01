@@ -310,6 +310,25 @@ int CDECL strerror_s(char *buffer, size_t numberOfElements, int errnum)
 }
 
 /**********************************************************************
+ *      _strerror_s (MSVCRT.@)
+ */
+int CDECL _strerror_s(char *buffer, size_t sizeInBytes, const char* strErrMsg)
+{
+    char* formatted = _strerror(strErrMsg);
+    size_t formattedSize = strlen(formatted);
+    if (formattedSize <= sizeInBytes - 1)
+    {
+        strcpy(buffer, formatted);
+    }
+    else
+    {
+        memcpy(buffer, formatted, sizeInBytes - 1);
+        buffer[sizeInBytes - 1] = '\0';
+    }
+    return 0;
+}
+
+/**********************************************************************
  *		_strerror	(MSVCRT.@)
  */
 char* CDECL _strerror(const char* str)

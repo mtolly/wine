@@ -79,7 +79,7 @@
 @ cdecl _statusfp() ucrtbase._statusfp
 @ cdecl -arch=i386 _statusfp2(ptr ptr) ucrtbase._statusfp2
 @ cdecl _strerror(long) ucrtbase._strerror
-@ stub _strerror_s
+@ cdecl _strerror_s(ptr long ptr) ucrtbase._strerror_s
 @ cdecl _wassert(wstr wstr long) ucrtbase._wassert
 @ cdecl _wcserror(long) ucrtbase._wcserror
 @ cdecl _wcserror_s(ptr long long) ucrtbase._wcserror_s
