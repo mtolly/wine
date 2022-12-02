@@ -695,7 +695,7 @@
 @ cdecl _o__strdate_s(ptr long) ucrtbase._o__strdate_s
 @ cdecl _o__strdup(str) ucrtbase._o__strdup
 @ cdecl _o__strerror(long) ucrtbase._o__strerror
-@ stub _o__strerror_s
+@ cdecl _o__strerror_s(ptr long ptr) uctrbase._o__strerror_s
 @ cdecl _o__strftime_l(ptr long str ptr ptr) ucrtbase._o__strftime_l
 @ cdecl _o__stricmp(str str) ucrtbase._o__stricmp
 @ cdecl _o__stricmp_l(str str ptr) ucrtbase._o__stricmp_l

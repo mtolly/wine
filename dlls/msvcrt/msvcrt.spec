@@ -957,7 +957,7 @@
 @ cdecl _strdup(str)
 # stub _strdup_dbg(str long str long)
 @ cdecl _strerror(long)
-# stub _strerror_s(ptr long long)
+@ cdecl _strerror_s(ptr long ptr)
 @ cdecl _stricmp(str str)
 @ cdecl _stricmp_l(str str ptr)
 @ cdecl _stricoll(str str)
